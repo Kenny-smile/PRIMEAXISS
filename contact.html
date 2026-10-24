@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | PrimeAxis Projects Limited</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F7F6F2;
+            color: #222222;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            background: #0B1F33;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area img {
+            width: 70px;
+            height: 70px;
+            
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #F7F6F2;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #C5A253;
+        }
+
+
+        /* PAGE HERO */
+
+        .page-hero {
+            background: #0B1F33;
+            padding: 90px 7%;
+            text-align: center;
+            border-bottom: 2px solid #C5A253;
+        }
+
+        .page-label {
+            color: #C5A253;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .page-hero h1 {
+            color: #F7F6F2;
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            color: #F7F6F2;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* CONTACT SECTION */
+
+        .contact-section {
+            padding: 90px 7%;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+
+        /* CONTACT INFORMATION */
+
+        .contact-info {
+            padding: 10px 0;
+        }
+
+        .contact-info-label {
+            color: #C5A253;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .contact-info h2 {
+            color: #0B1F33;
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            color: #222222;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 22px;
+        }
+
+        .contact-item {
+            border-left: 3px solid #C5A253;
+            padding-left: 20px;
+        }
+
+        .contact-item h3 {
+            color: #0B1F33;
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .contact-item p {
+            color: #222222;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+
+        /* CONTACT FORM */
+
+        .contact-form {
+            background: #0B1F33;
+            padding: 45px;
+            border: 2px solid #C5A253;
+        }
+
+        .contact-form h2 {
+            color: #F7F6F2;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #F7F6F2;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #C5A253;
+            background: #F7F6F2;
+            color: #222222;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border: 2px solid #C5A253;
+        }
+
+        .submit-button {
+            display: inline-block;
+            background: #C5A253;
+            color: #0B1F33;
+            border: none;
+            padding: 15px 30px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #F7F6F2;
+        }
+
+
+        /* CTA */
+
+        .contact-cta {
+            background: #0B1F33;
+            padding: 75px 7%;
+            text-align: center;
+            border-top: 2px solid #C5A253;
+        }
+
+        .contact-cta h2 {
+            color: #F7F6F2;
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .contact-cta p {
+            color: #F7F6F2;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+
+        /* FOOTER */
+
+        .site-footer {
+            background: #0B1F33;
+            padding: 35px 7% 20px;
+            border-top: 1px solid #C5A253;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-text {
+            color: #F7F6F2;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-text strong {
+            color: #C5A253;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #F7F6F2;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: #C5A253;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #C5A253;
+            margin-top: 25px;
+            padding-top: 18px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #F7F6F2;
+            font-size: 13px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .page-hero h1 {
+                font-size: 44px;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .contact-info h2 {
+                font-size: 34px;
+            }
+
+            .contact-form {
+                padding: 30px 25px;
+            }
+
+            .contact-form h2 {
+                font-size: 28px;
+            }
+
+            .contact-cta h2 {
+                font-size: 34px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo-area">
+
+            <img
+                src="images/logo.jpeg"
+                alt="PrimeAxis Projects Limited Logo"
+            >
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+
+        <p class="page-label">
+            GET IN TOUCH
+        </p>
+
+        <h1>
+            Contact Us
+        </h1>
+
+        <p>
+            Have a project, property, or business requirement?
+            Get in touch with PrimeAxis Projects Limited and
+            let's discuss how we can create value together.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact-section">
+
+        <div class="contact-layout">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <p class="contact-info-label">
+                    LET'S CONNECT
+                </p>
+
+                <h2>
+                    We Would Love To Hear From You.
+                </h2>
+
+                <p>
+                    Whether you are looking for construction services,
+                    real estate solutions, property management, or
+                    building materials, our team is ready to discuss
+                    your requirements.
+                </p>
+
+
+                <div class="contact-details">
+
+
+                    <div class="contact-item">
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            +234 XXX XXX XXXX
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            info@primeaxisprojects.com
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h3>
+                            Office
+                        </h3>
+
+                        <p>
+                            Lagos, Nigeria
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <h3>
+                            Business Hours
+                        </h3>
+
+                        <p>
+                            Monday – Friday<br>
+                            8:00 AM – 5:00 PM
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Send Us a Message
+                </h2>
+
+
+                <form>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Service Required
+                        </label>
+
+                        <input
+                            type="text"
+                            id="service"
+                            name="service"
+                            placeholder="e.g. Construction"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us about your project or enquiry"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Send Message →
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="contact-cta">
+
+        <h2>
+            Building Value. Creating Possibilities.
+        </h2>
+
+        <p>
+            PrimeAxis Projects Limited is ready to work with
+            you on your next project.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-text">
+
+                <strong>
+                    PrimeAxis Projects Limited
+                </strong>
+
+                <br>
+
+                Building Value. Creating Possibilities.
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 PrimeAxis Projects Limited. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

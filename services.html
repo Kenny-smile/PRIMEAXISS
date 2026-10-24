@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | PrimeAxis Projects Limited</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F7F6F2;
+            color: #222222;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            background: #0B1F33;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #F7F6F2;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #C5A253;
+        }
+
+
+        /* PAGE HERO */
+
+        .page-hero {
+            background: #0B1F33;
+            padding: 90px 7%;
+            text-align: center;
+            border-bottom: 2px solid #C5A253;
+        }
+
+        .page-label {
+            color: #C5A253;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .page-hero h1 {
+            color: #F7F6F2;
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
+
+        .page-hero p {
+            color: #F7F6F2;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* SERVICES */
+
+        .services-section {
+            padding: 90px 7%;
+        }
+
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 90px;
+        }
+
+        .service-block:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-block:nth-child(even) .service-details {
+            direction: ltr;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            display: block;
+            border: 3px solid #C5A253;
+        }
+
+        .service-number {
+            color: #C5A253;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .service-details h2 {
+            color: #0B1F33;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .service-details > p {
+            color: #222222;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            color: #222222;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-list li::before {
+            content: "—";
+            color: #C5A253;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+
+        /* CTA */
+
+        .services-cta {
+            background: #0B1F33;
+            padding: 80px 7%;
+            text-align: center;
+            border-top: 2px solid #C5A253;
+        }
+
+        .services-cta h2 {
+            color: #F7F6F2;
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .services-cta p {
+            color: #F7F6F2;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #C5A253;
+            color: #0B1F33;
+            padding: 15px 30px;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background: #F7F6F2;
+        }
+
+
+        /* FOOTER */
+
+        .site-footer {
+            background: #0B1F33;
+            padding: 35px 7% 20px;
+            border-top: 1px solid #C5A253;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-text {
+            color: #F7F6F2;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-text strong {
+            color: #C5A253;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #F7F6F2;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: #C5A253;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #C5A253;
+            margin-top: 25px;
+            padding-top: 18px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #F7F6F2;
+            font-size: 13px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .page-hero h1 {
+                font-size: 44px;
+            }
+
+            .service-block,
+            .service-block:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+                gap: 35px;
+            }
+
+            .service-image {
+                height: 350px;
+            }
+
+            .service-details h2 {
+                font-size: 34px;
+            }
+
+            .services-cta h2 {
+                font-size: 34px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo-area">
+
+            <img
+                src="images/logo.jpeg"
+                alt="PrimeAxis Projects Limited Logo"
+            >
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+
+        <p class="page-label">
+            WHAT WE DO
+        </p>
+
+        <h1>
+            Our Services
+        </h1>
+
+        <p>
+            PrimeAxis Projects Limited provides specialized solutions
+            across construction, real estate, property management,
+            and building materials supply.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services-section">
+
+
+        <!-- CONSTRUCTION -->
+
+        <div class="service-block">
+
+            <img
+                src="images/construction.jpg"
+                alt="Construction projects"
+                class="service-image"
+            >
+
+
+            <div class="service-details">
+
+                <p class="service-number">
+                    01 / CONSTRUCTION
+                </p>
+
+                <h2>
+                    Construction
+                </h2>
+
+                <p>
+                    We provide professional building construction
+                    and development solutions designed around quality,
+                    functionality, and long-term value.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Residential construction
+                    </li>
+
+                    <li>
+                        Commercial building projects
+                    </li>
+
+                    <li>
+                        Building development
+                    </li>
+
+                    <li>
+                        Project support and coordination
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- REAL ESTATE -->
+
+        <div class="service-block">
+
+            <img
+                src="images/real estate.jpg"
+                alt="Real estate property"
+                class="service-image"
+            >
+
+
+            <div class="service-details">
+
+                <p class="service-number">
+                    02 / REAL ESTATE
+                </p>
+
+                <h2>
+                    Real Estate
+                </h2>
+
+                <p>
+                    Our real estate solutions help individuals,
+                    investors, developers, and property owners
+                    identify valuable property opportunities.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Property opportunities
+                    </li>
+
+                    <li>
+                        Real estate development
+                    </li>
+
+                    <li>
+                        Property sourcing
+                    </li>
+
+                    <li>
+                        Investment support
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROPERTY MANAGEMENT -->
+
+        <div class="service-block">
+
+            <img
+                src="images/property management.jpg"
+                alt="Property management"
+                class="service-image"
+            >
+
+
+            <div class="service-details">
+
+                <p class="service-number">
+                    03 / PROPERTY MANAGEMENT
+                </p>
+
+                <h2>
+                    Property Management
+                </h2>
+
+                <p>
+                    We provide reliable property and facility
+                    management solutions focused on maintaining
+                    properties and protecting their long-term value.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Property maintenance
+                    </li>
+
+                    <li>
+                        Facility management
+                    </li>
+
+                    <li>
+                        Property support
+                    </li>
+
+                    <li>
+                        Asset care and coordination
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUILDING MATERIALS -->
+
+        <div class="service-block">
+
+            <img
+                src="images/building materials.jpg"
+                alt="Building materials supply"
+                class="service-image"
+            >
+
+
+            <div class="service-details">
+
+                <p class="service-number">
+                    04 / BUILDING MATERIALS
+                </p>
+
+                <h2>
+                    Building Materials Supply
+                </h2>
+
+                <p>
+                    We supply quality building materials for
+                    construction and development projects, with
+                    reliable sourcing and delivery support.
+                </p>
+
+
+                <ul class="service-list">
+
+                    <li>
+                        Construction materials
+                    </li>
+
+                    <li>
+                        Reliable material sourcing
+                    </li>
+
+                    <li>
+                        Project material supply
+                    </li>
+
+                    <li>
+                        Delivery support
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="services-cta">
+
+        <h2>
+            Have a Project in Mind?
+        </h2>
+
+        <p>
+            Let's discuss your requirements and explore how
+            PrimeAxis Projects Limited can help create lasting value.
+        </p>
+
+        <a href="contact.html" class="cta-button">
+            Contact Us →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-text">
+
+                <strong>
+                    PrimeAxis Projects Limited
+                </strong>
+
+                <br>
+
+                Building Value. Creating Possibilities.
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 PrimeAxis Projects Limited. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

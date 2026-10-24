@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrimeAxis Projects Limited</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F7F6F2;
+            color: #222222;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: #0B1F33;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-area img {
+            width: 70px;
+            height: 70px;
+
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #F7F6F2;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #C5A253;
+        }
+
+        /* =========================
+           QUICK ACCESS
+        ========================= */
+
+        .quick-access {
+            background: #C5A253;
+            padding: 13px 7%;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .quick-access a {
+            color: #0B1F33;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .quick-access a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 85vh;
+            padding: 80px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 680px;
+        }
+
+        .hero-label {
+            color: #C5A253;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .company-name {
+            color: #0B1F33;
+            font-size: 72px;
+            line-height: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .company-name span {
+            color: #C5A253;
+        }
+
+        .tagline {
+            color: #222222;
+            font-size: 25px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .description {
+            color: #222222;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            border: 1px solid #C5A253;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #0B1F33;
+            color: #F7F6F2;
+        }
+
+        .btn-secondary {
+            background: #F7F6F2;
+            color: #0B1F33;
+        }
+
+        .btn:hover {
+            background: #C5A253;
+            color: #0B1F33;
+        }
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-image {
+            flex: 1;
+            max-width: 520px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            border: 3px solid #C5A253;
+        }
+
+/* =========================
+   CORE SERVICES
+========================= */
+
+.services-preview {
+    padding: 90px 7%;
+    background: #0B1F33;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-label {
+    color: #C5A253;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    color: #F7F6F2;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: #F7F6F2;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #F7F6F2;
+    border: 2px solid #C5A253;
+    padding: 35px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-number {
+    color: #C5A253;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #0B1F33;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #222222;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.service-link {
+    color: #0B1F33;
+    font-weight: bold;
+    border-bottom: 2px solid #C5A253;
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+.service-link:hover {
+    color: #C5A253;
+}
+
+
+/* =========================
+   MOBILE SERVICES
+========================= */
+
+@media (max-width: 700px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .service-card {
+        min-height: 270px;
+    }
+}
+.service-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid #C5A253;
+}
+
+.service-content {
+    padding-top: 25px;
+}
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .quick-access {
+                gap: 18px;
+                text-align: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .company-name {
+                font-size: 52px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-image img {
+                height: 400px;
+            }
+        }
+        /* WHY CHOOSE PRIMEAXIS */
+
+.why-section {
+    padding: 90px 7%;
+    background: #F7F6F2;
+}
+
+.why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.why-label {
+    color: #C5A253;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.why-content h2 {
+    color: #0B1F33;
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.why-content > p {
+    color: #222222;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.why-list {
+    display: grid;
+    gap: 20px;
+}
+
+.why-item {
+    border-left: 3px solid #C5A253;
+    padding: 5px 0 5px 20px;
+}
+
+.why-item h3 {
+    color: #0B1F33;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.why-item p {
+    color: #222222;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.why-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #C5A253;
+}
+
+@media (max-width: 800px) {
+    .why-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .why-content h2 {
+        font-size: 34px;
+    }
+
+    .why-image img {
+        height: 400px;
+    }
+}
+/* FEATURED PROJECTS */
+
+.projects-preview {
+    padding: 90px 7%;
+    background: #0B1F33;
+}
+
+.projects-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.projects-heading .section-label {
+    color: #C5A253;
+}
+
+.projects-heading h2 {
+    color: #F7F6F2;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.projects-heading p {
+    color: #F7F6F2;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #F7F6F2;
+    border: 2px solid #C5A253;
+}
+
+.project-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info span {
+    color: #C5A253;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-info h3 {
+    color: #0B1F33;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.project-info p {
+    color: #222222;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.projects-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-heading h2 {
+        font-size: 34px;
+    }
+}
+/* OUR MISSION */
+
+.mission-section {
+    padding: 90px 7%;
+    background: #F7F6F2;
+}
+
+.mission-box {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #C5A253;
+    padding: 65px 55px;
+}
+
+.mission-label {
+    color: #C5A253;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.mission-box h2 {
+    color: #0B1F33;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.mission-box p {
+    color: #222222;
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 780px;
+    margin: auto;
+}
+
+@media (max-width: 700px) {
+    .mission-box {
+        padding: 45px 25px;
+    }
+
+    .mission-box h2 {
+        font-size: 34px;
+    }
+
+    .mission-box p {
+        font-size: 16px;
+    }
+}
+/* CTA FOOTER */
+
+.contact-cta {
+    background: #0B1F33;
+    padding: 85px 7%;
+    text-align: center;
+    border-top: 2px solid #C5A253;
+}
+
+.contact-cta .section-label {
+    color: #C5A253;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.contact-cta h2 {
+    color: #F7F6F2;
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-cta p {
+    color: #F7F6F2;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #C5A253;
+    color: #0B1F33;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #C5A253;
+}
+
+.cta-button:hover {
+    background: #F7F6F2;
+    color: #0B1F33;
+}
+
+@media (max-width: 700px) {
+
+    .contact-cta {
+        padding: 65px 7%;
+    }
+
+    .contact-cta h2 {
+        font-size: 34px;
+    }
+
+    .contact-cta p {
+        font-size: 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html" class="logo-area">
+            <img src="images/logo.jpeg" alt="PrimeAxis Projects Limited Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- QUICK ACCESS -->
+
+    <div class="quick-access">
+
+        <a href="services.html">Construction</a>
+
+        <a href="services.html">Real Estate</a>
+
+        <a href="services.html">Property Management</a>
+
+        <a href="services.html">Building Materials</a>
+
+    </div>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                PRIMEAXIS PROJECTS LIMITED
+            </p>
+
+            <h1 class="company-name">
+                PRIMEAXIS
+                <br>
+                <span>PROJECTS</span>
+            </h1>
+
+            <p class="tagline">
+                Building Value. Creating Possibilities.
+            </p>
+
+            <p class="description">
+                Integrated solutions across real estate, building construction,
+                property management, and building materials supply.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="services.html" class="btn btn-primary">
+                    Explore Our Services
+                </a>
+
+                <a href="contact.html" class="btn btn-secondary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="images/constructio.jpg"
+                alt="PrimeAxis construction project"
+            >
+
+        </div>
+
+    </section>
+<!-- CORE SERVICES -->
+
+<section class="services-preview">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            WHAT WE DO
+        </p>
+
+        <h2>
+            Our Core Services
+        </h2>
+
+        <p>
+            PrimeAxis Projects Limited provides specialized solutions
+            across four key areas of the built environment.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <!-- CONSTRUCTION -->
+
+        <div class="service-card">
+
+            <img
+                src="images/constructio.jpg"
+                alt="Construction projects"
+                class="service-image"
+            >
+
+            <div class="service-content">
+
+                <p class="service-number">
+                    01 / CONSTRUCTION
+                </p>
+
+                <h3>
+                    Construction
+                </h3>
+
+                <p>
+                    Professional building construction and development
+                    solutions for residential, commercial, and other
+                    building projects.
+                </p>
+
+                <a href="construction.html" class="service-link">
+                    Explore Construction →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- REAL ESTATE -->
+
+        <div class="service-card">
+
+            <img
+                src="images/reall estate.png"
+                alt="Real estate property"
+                class="service-image"
+            >
+
+            <div class="service-content">
+
+                <p class="service-number">
+                    02 / REAL ESTATE
+                </p>
+
+                <h3>
+                    Real Estate
+                </h3>
+
+                <p>
+                    Real estate solutions connecting individuals,
+                    investors, developers, and property owners with
+                    valuable opportunities.
+                </p>
+
+                <a href="real-estate.html" class="service-link">
+                    Explore Real Estate →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROPERTY MANAGEMENT -->
+
+        <div class="service-card">
+
+            <img
+                src="images/property managementt.jpg"
+                alt="Property management"
+                class="service-image"
+            >
+
+            <div class="service-content">
+
+                <p class="service-number">
+                    03 / PROPERTY MANAGEMENT
+                </p>
+
+                <h3>
+                    Property Management
+                </h3>
+
+                <p>
+                    Reliable property and facility management services
+                    designed to protect, maintain, and maximize the
+                    value of properties.
+                </p>
+
+                <a href="property management.html" class="service-link">
+                    Explore Property Management →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUILDING MATERIALS -->
+
+        <div class="service-card">
+
+            <img
+                src="images/building materialss.jpg"
+                alt="Building materials supply"
+                class="service-image"
+            >
+
+            <div class="service-content">
+
+                <p class="service-number">
+                    04 / BUILDING MATERIALS
+                </p>
+
+                <h3>
+                    Building Materials Supply
+                </h3>
+
+                <p>
+                    Quality building materials supplied for construction
+                    and development projects, with a focus on reliable
+                    sourcing and delivery.
+                </p>
+
+                <a href="building materials.html" class="service-link">
+                    Explore Materials →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- WHY CHOOSE PRIMEAXIS -->
+
+<section class="why-section">
+
+    <div class="why-layout">
+
+        <div class="why-content">
+
+            <p class="why-label">
+                WHY PRIMEAXIS
+            </p>
+
+            <h2>
+                Building With Purpose.
+                Managing With Excellence.
+            </h2>
+
+            <p>
+                At PrimeAxis Projects Limited, we combine practical
+                expertise, reliable service, and a commitment to quality
+                to deliver solutions that create lasting value.
+            </p>
+
+            <div class="why-list">
+
+                <div class="why-item">
+                    <h3>
+                        Quality & Professionalism
+                    </h3>
+
+                    <p>
+                        We approach every project with attention to
+                        quality, detail, and professional standards.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <h3>
+                        Reliable Solutions
+                    </h3>
+
+                    <p>
+                        Our services are designed around dependable
+                        solutions that meet the needs of our clients.
+                    </p>
+                </div>
+
+                <div class="why-item">
+                    <h3>
+                        Value-Focused Approach
+                    </h3>
+
+                    <p>
+                        We focus on solutions that protect investments,
+                        improve properties, and create long-term value.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-image">
+
+            <img
+                src="images/why primeAxis.jpg"
+                alt="PrimeAxis professional project"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FEATURED PROJECTS -->
+
+<section class="projects-preview">
+
+    <div class="projects-heading">
+
+        <p class="section-label">
+            OUR WORK
+        </p>
+
+        <h2>
+            Featured Projects
+        </h2>
+
+        <p>
+            Explore some of the areas where PrimeAxis Projects Limited
+            delivers practical solutions and lasting value.
+        </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <!-- PROJECT 01 -->
+
+        <div class="project-card">
+
+            <img
+                src="images/project-1.jpg"
+                alt="PrimeAxis construction project"
+            >
+
+            <div class="project-info">
+
+                <span>
+                    01 / CONSTRUCTION
+                </span>
+
+                <h3>
+                    Building & Construction
+                </h3>
+
+                <p>
+                    Professional construction solutions developed
+                    with quality, functionality, and long-term value
+                    in mind.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 02 -->
+
+        <div class="project-card">
+
+            <img
+                src="images/project-2.jpg"
+                alt="PrimeAxis real estate project"
+            >
+
+            <div class="project-info">
+
+                <span>
+                    02 / REAL ESTATE
+                </span>
+
+                <h3>
+                    Real Estate Development
+                </h3>
+
+                <p>
+                    Property opportunities and development solutions
+                    designed to support investors, developers, and
+                    property owners.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="projects-button">
+
+        <a href="projects.html" class="btn btn-secondary">
+            View All Projects →
+        </a>
+
+    </div>
+
+</section>
+<!-- OUR MISSION -->
+
+<section class="mission-section">
+
+    <div class="mission-box">
+
+        <p class="mission-label">
+            OUR MISSION
+        </p>
+
+        <h2>
+            Creating Value Through Excellence
+        </h2>
+
+        <p>
+            Our mission is to provide reliable and professional
+            solutions across construction, real estate, property
+            management, and building materials supply, while
+            creating lasting value for our clients, partners, and
+            communities.
+        </p>
+
+    </div>
+
+</section>
+<!-- CONTACT CTA -->
+
+<section class="contact-cta">
+
+    <p class="section-label">
+        LET'S WORK TOGETHER
+    </p>
+
+    <h2>
+        Ready to Build Something Valuable?
+    </h2>
+
+    <p>
+        Whether you are looking for construction services,
+        real estate opportunities, property management,
+        or reliable building materials, PrimeAxis Projects
+        Limited is ready to help.
+    </p>
+
+    <a href="contact.html" class="cta-button">
+        Contact PrimeAxis →
+    </a>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,927 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | PrimeAxis Projects Limited</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#F7F6F2;
+    color:#222222;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#0B1F33;
+    padding:20px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo-area img{
+    width:70px;
+    height: 70px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#F7F6F2;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#C5A253;
+}
+
+/* HERO */
+
+.hero{
+    background:#0B1F33;
+    padding:80px 7%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+    border-bottom:2px solid #C5A253;
+}
+
+.hero-label{
+    color:#C5A253;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:#F7F6F2;
+    font-size:64px;
+    line-height:1.08;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#C5A253;
+}
+
+.hero p{
+    color:#F7F6F2;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border:3px solid #C5A253;
+}
+
+.button{
+    display:inline-block;
+    background:#C5A253;
+    color:#0B1F33;
+    padding:15px 28px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#F7F6F2;
+}
+
+/* GENERAL SECTIONS */
+
+.section{
+    padding:70px 7%;
+}
+
+.section-label{
+    color:#C5A253;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.section-title{
+    color:#0B1F33;
+    font-size:38px;
+    line-height:1.2;
+    margin:15px 0 25px;
+}
+
+.section-text{
+    line-height:1.9;
+    font-size:16px;
+}
+
+.center{
+    text-align:center;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* COMPANY INTRODUCTION */
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.intro-image img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border:3px solid #C5A253;
+}
+
+.intro-content p{
+    margin-bottom:18px;
+}
+
+/* MISSION AND VISION */
+
+.mission-section{
+    background:#0B1F33;
+    padding:70px 7%;
+}
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.info-card{
+    background:#F7F6F2;
+    padding:35px;
+    border:2px solid #C5A253;
+}
+
+.info-card h3{
+    color:#0B1F33;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.info-card p{
+    line-height:1.8;
+}
+
+/* CORE VALUES */
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:35px;
+}
+
+.value-card{
+    padding:28px;
+    border:2px solid #C5A253;
+    background:#F7F6F2;
+}
+
+.value-card h3{
+    color:#0B1F33;
+    font-size:21px;
+    margin-bottom:12px;
+}
+
+.value-card p{
+    line-height:1.8;
+}
+
+/* DARK BRAND SECTION */
+
+.brand-section{
+    background:#0B1F33;
+    padding:70px 7%;
+}
+
+.brand-section h2{
+    color:#F7F6F2;
+    font-size:36px;
+    margin:15px 0 20px;
+}
+
+.brand-section p{
+    color:#F7F6F2;
+    line-height:1.9;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:35px;
+}
+
+.service-card{
+    padding:30px;
+    border:2px solid #C5A253;
+    background:#F7F6F2;
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-4px);
+}
+
+.service-card h3{
+    color:#0B1F33;
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.service-link{
+    color:#0B1F33;
+    font-weight:bold;
+    border-bottom:2px solid #C5A253;
+}
+
+/* OUR APPROACH */
+
+.approach-section{
+    background:#ECEBE7;
+    padding:70px 7%;
+}
+
+.approach-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+.approach-card{
+    padding:25px;
+    background:#F7F6F2;
+    border-top:3px solid #C5A253;
+}
+
+.approach-card h3{
+    color:#0B1F33;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+/* CLOSING SECTION */
+
+.closing-section{
+    background:#0B1F33;
+    padding:70px 7%;
+    text-align:center;
+    border-top:2px solid #C5A253;
+}
+
+.closing-section h2{
+    color:#F7F6F2;
+    font-size:38px;
+    margin:15px 0;
+}
+
+.closing-section p{
+    color:#F7F6F2;
+    max-width:700px;
+    margin:0 auto 30px;
+    line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0B1F33;
+    border-top:1px solid #C5A253;
+    padding:30px 7%;
+    text-align:center;
+}
+
+footer p{
+    color:#F7F6F2;
+}
+
+footer .tagline{
+    color:#C5A253;
+    margin-top:10px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px 22px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding:55px 7%;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero img{
+        height:350px;
+    }
+
+    .intro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mission-grid{
+        grid-template-columns:1fr;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .approach-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .logo-area img{
+        width:130px;
+    }
+
+    .nav-links{
+        gap:12px 16px;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero img{
+        height:280px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .brand-section h2,
+    .closing-section h2{
+        font-size:30px;
+    }
+
+    .values-grid,
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-card{
+        padding:25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="index.html" class="logo-area">
+    <img src="images/logo.jpeg" alt="PrimeAxis Projects Limited logo">
+</a>
+
+<ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="about.html">About</a></li>
+
+    <li><a href="services.html">Services</a></li>
+
+    <li><a href="projects.html">Projects</a></li>
+
+    <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+    <p class="hero-label">ABOUT PRIMEAXIS</p>
+
+    <h1>
+        Building Value.
+        <br>
+        <span>Creating Possibilities.</span>
+    </h1>
+
+    <p>
+        PrimeAxis Projects Limited delivers integrated
+        solutions across real estate, building construction,
+        property management and building materials supply.
+        We are committed to professionalism, quality and
+        creating lasting value for our clients.
+    </p>
+
+    <a href="services.html" class="button">
+        Explore Our Services →
+    </a>
+
+</div>
+
+<div>
+
+    <img
+        src="images/company building.jpg"
+        alt="Building representing PrimeAxis Projects Limited"
+    >
+
+</div>
+
+</section>
+
+
+<!-- COMPANY INTRODUCTION -->
+
+<section class="section">
+
+<div class="container intro-grid">
+
+    <div class="intro-content">
+
+        <p class="section-label">WHO WE ARE</p>
+
+        <h2 class="section-title">
+            A Partner in Building Lasting Value
+        </h2>
+
+        <p class="section-text">
+            PrimeAxis Projects Limited is a Nigerian company
+            focused on providing practical and dependable
+            solutions in real estate, construction, property
+            management and building materials supply.
+        </p>
+
+        <p class="section-text">
+            We work with individuals, businesses, investors,
+            developers and property owners, helping them
+            approach their property and construction needs
+            with confidence.
+        </p>
+
+        <p class="section-text">
+            Our approach is built around understanding our
+            clients, delivering professional service and
+            creating value that lasts beyond each project.
+        </p>
+
+    </div>
+
+    <div class="intro-image">
+
+        <img
+            src="images/primeaxis team.png"
+            alt="PrimeAxis team working together"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- MISSION AND VISION -->
+
+<section class="mission-section">
+
+<div class="container">
+
+    <div class="center" style="margin-bottom:35px;">
+
+        <p class="section-label">OUR PURPOSE</p>
+
+        <h2 style="color:#F7F6F2;font-size:38px;margin-top:15px;">
+            What Guides Us
+        </h2>
+
+    </div>
+
+    <div class="mission-grid">
+
+        <div class="info-card">
+
+            <h3>Our Mission</h3>
+
+            <p>
+                To provide dependable real estate, construction,
+                property management and building materials
+                solutions that create sustainable value for
+                individuals, businesses and communities.
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Our Vision</h3>
+
+            <p>
+                To become a trusted name in Nigeria's real estate
+                and construction industry through professionalism,
+                quality, integrity and the delivery of lasting value.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CORE VALUES -->
+
+<section class="section">
+
+<div class="container">
+
+    <div class="center">
+
+        <p class="section-label">WHAT WE STAND FOR</p>
+
+        <h2 class="section-title">
+            Our Core Values
+        </h2>
+
+        <p class="section-text">
+            The principles that guide how we work, serve our
+            clients and approach every opportunity.
+        </p>
+
+    </div>
+
+    <div class="values-grid">
+
+        <div class="value-card">
+
+            <h3>Quality</h3>
+
+            <p>
+                We value dependable solutions and attention
+                to detail in every service we provide.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <h3>Professionalism</h3>
+
+            <p>
+                We approach our responsibilities with care,
+                clear communication and professional conduct.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <h3>Integrity</h3>
+
+            <p>
+                We believe in honest communication,
+                transparency and responsible service.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <h3>Reliability</h3>
+
+            <p>
+                We aim to provide dependable support
+                throughout our work with clients.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <h3>Client Satisfaction</h3>
+
+            <p>
+                We pay attention to client needs and work
+                towards practical, valuable outcomes.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <h3>Lasting Value</h3>
+
+            <p>
+                We focus on solutions designed to serve
+                our clients' needs over the long term.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- BRAND STATEMENT -->
+
+<section class="brand-section">
+
+<div class="container center">
+
+    <p class="section-label">THE PRIMEAXIS APPROACH</p>
+
+    <h2>More Than Projects. A Commitment to Value.</h2>
+
+    <p>
+        We understand that property and construction decisions
+        matter. That is why we focus on dependable service,
+        practical solutions and professional support that help
+        our clients move forward with confidence.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- OUR SERVICES -->
+
+<section class="section">
+
+<div class="container">
+
+    <div class="center">
+
+        <p class="section-label">WHAT WE DO</p>
+
+        <h2 class="section-title">
+            Our Areas of Expertise
+        </h2>
+
+        <p class="section-text">
+            Explore the services PrimeAxis Projects Limited
+            provides to individuals, businesses and property owners.
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+
+            <h3>Real Estate</h3>
+
+            <p>
+                Property and land acquisition, sales, property
+                sourcing, investment opportunities, development
+                and property consultancy.
+            </p>
+
+            <a href="real-estate.html" class="service-link">
+                Explore Real Estate →
+            </a>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>Building Construction</h3>
+
+            <p>
+                Residential and commercial construction,
+                renovation, project management, finishing
+                works and site supervision.
+            </p>
+
+            <a href="construction.html" class="service-link">
+                Explore Construction →
+            </a>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>Property Management</h3>
+
+            <p>
+                Property management, maintenance, inspections
+                and practical support for property owners.
+            </p>
+
+            <a href="property-management.html" class="service-link">
+                Explore Property Management →
+            </a>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>Building Materials Supply</h3>
+
+            <p>
+                Building materials sourcing, procurement,
+                supply and distribution for individuals,
+                contractors and developers.
+            </p>
+
+            <a href="building-materials.html" class="service-link">
+                Explore Materials Supply →
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- OUR APPROACH -->
+
+<section class="approach-section">
+
+<div class="container">
+
+    <div class="center">
+
+        <p class="section-label">HOW WE WORK</p>
+
+        <h2 class="section-title">
+            Guided by Purpose
+        </h2>
+
+    </div>
+
+    <div class="approach-grid">
+
+        <div class="approach-card">
+
+            <h3>1. Understand</h3>
+
+            <p>
+                We consider the needs, objectives and
+                expectations behind every client enquiry.
+            </p>
+
+        </div>
+
+        <div class="approach-card">
+
+            <h3>2. Plan</h3>
+
+            <p>
+                We focus on practical solutions that align
+                with the requirements of each project.
+            </p>
+
+        </div>
+
+        <div class="approach-card">
+
+            <h3>3. Deliver Value</h3>
+
+            <p>
+                We aim to provide professional service
+                and solutions that support lasting value.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CLOSING SECTION -->
+
+<section class="closing-section">
+
+<div class="container">
+
+    <p class="section-label">LET'S BUILD SOMETHING VALUABLE</p>
+
+    <h2>Have a Project in Mind?</h2>
+
+    <p>
+        Whether you need real estate support, construction
+        services, property management or building materials,
+        PrimeAxis Projects Limited is ready to discuss your needs.
+    </p>
+
+    <a href="contact.html" class="button">
+        Contact PrimeAxis →
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 PrimeAxis Projects Limited. All Rights Reserved.
+    </p>
+
+    <p class="tagline">
+        Building Value. Creating Possibilities.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
